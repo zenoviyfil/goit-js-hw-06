@@ -10,15 +10,15 @@ class StringBuilder {
     };
 
     padEnd(str) {
-        return this.#value.concat(str)
+        return (this.#value = str + this.#value);
     };
 
     padStart(str) {
-        return str.concat(this.#value)
+        return (this.#value = this.#value + str);
     };
 
     padBoth(str) {
-        return str.concat(this.#value, str)
+        return (this.#value = str + this.#value + str);
     };
 }
 
