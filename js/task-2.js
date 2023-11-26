@@ -14,7 +14,11 @@ class Storage {
     }
 
     removeItem(itemToRemove) {
-        
+        const elIdx = this.#items.indexOf(itemToRemove)
+        if (elIdx !== -1) {
+            this.#items.splice(elIdx, 1)
+        }
+
     }
 }
 
